@@ -1,5 +1,7 @@
-package id.ac.ui.cs.advprog.prolan.service;
-import id.ac.ui.cs.advprog.prolan.model.Product;
+package id.ac.ui.cs.advprog.tugasprolan.service;
+
+import id.ac.ui.cs.advprog.tugasprolan.model.Product;
+
 import java.util.List;
 
 public interface ProductService {
