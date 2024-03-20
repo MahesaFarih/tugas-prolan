@@ -8,10 +8,8 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
 @Service
 public class ProductServiceImpl implements ProductService {
-
     @Autowired
     private ProductRepository productRepository;
 
@@ -28,6 +26,18 @@ public class ProductServiceImpl implements ProductService {
         productIterator.forEachRemaining(allProduct::add);
         return allProduct;
     }
+    public Product findProductByName(String name) {
+        return productRepository.findProductByName(name);
 
+    }
+    @Override
+    public Product editProduct(String name, Product editedProduct) {
+        return productRepository.editProduct(name, editedProduct);
+    }
+
+    @Override
+    public  Product deleteProduct(String name){
+        return productRepository.deleteProduct(name);
+    }
 
 }
