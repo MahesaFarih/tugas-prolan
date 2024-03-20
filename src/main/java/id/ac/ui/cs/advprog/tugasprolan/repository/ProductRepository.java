@@ -23,6 +23,12 @@ public class ProductRepository {
         return product;
     }
 
+    public Product deleteProduct (String name) {
+        Product product = findProductByName(name);
+        productData.remove(product);
+        return product;
+    }
+
     public Product findProductByName(String name) {
         for (Product product : productData) {
             if (product.getProductName().equals(name)) {
